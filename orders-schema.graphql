@@ -26,7 +26,7 @@ type Order @key(fields: "id") {
   A list of all the items they purchased. This is the Variants, not the Products so we know exactly which
   product and which size/color/feature was bought
   """
-  items: [ProductVariant!]! @requiresScopes(scopes: [["order:buyer"]])
+  items: [ProductVariant!]! @requiresScopes(scopes: [["order:items"]])
 }
 
 type User @key(fields: "id", resolvable: false) {
